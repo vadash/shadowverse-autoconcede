@@ -58,6 +58,11 @@ while 1
 		Sleep(1000)
 	}
 
+	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/rank_lost.png
+	if (ErrorLevel == 0) {
+		Click(foundX, foundY)
+	}	
+
 	Sleep(250)
 }
 
