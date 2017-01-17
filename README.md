@@ -9,5 +9,8 @@ It will help you stay in low ranks and complete daily quests faster
 * Start game in 1080p windowed fullscreen
 * Click on home [![](https://lh3.googleusercontent.com/-zKjtaDA1dgI/WHfUWNkxY8I/AAAAAAAAM5w/HFTmCRK9JHI/s0/Shadowverse_2017-01-12_22-08-59.jpg)](https://lh3.googleusercontent.com/-zKjtaDA1dgI/WHfUWNkxY8I/AAAAAAAAM5w/HFTmCRK9JHI/s0/Shadowverse_2017-01-12_22-08-59.jpg)
 
+# Game settings
+[![](https://lh3.googleusercontent.com/-wJe_m_n6tFU/WH135p78lRI/AAAAAAAAM84/3YjXx8Uwlbk/s0/Shadowverse_2017-01-17_04-48-16.png)](https://lh3.googleusercontent.com/-wJe_m_n6tFU/WH135p78lRI/AAAAAAAAM84/3YjXx8Uwlbk/s0/Shadowverse_2017-01-17_04-48-16.png)
+
 # Troubleshooting
 Navigate to folder **img** and recapture images from your game. I did it with Sharex tool https://getsharex.com/
