@@ -14,7 +14,3 @@ It will help you stay in low ranks and complete daily quests faster.
 
 # Troubleshooting
 Navigate to folder **img** and recapture images from your game. I did it with Sharex tool https://getsharex.com/
-
-# 1366x768 version
-Thanks to mahlaluoti for providing this version
-https://drive.google.com/drive/folders/0B3L3pwArQammVmpsbERuM0tQNkU
