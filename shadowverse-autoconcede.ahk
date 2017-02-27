@@ -6,62 +6,54 @@
 ;╚══════╝ ╚══╝╚══╝        ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚══════╝╚═════╝ ╚══════╝
                                                                                    
 #Include %A_ScriptDir%\libs\RandomBezier.ahk
+#Include %A_ScriptDir%\libs\FindText.ahk
+#Include %A_ScriptDir%\libs\Resources.ahk
 
-CoordMode, Mouse, Client
-CoordMode, Pixel, Client
+CoordMode, Mouse
 
 while 1
 {
-	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/multi.png
-	if (ErrorLevel == 0) {
-		Click(foundX, foundY)
-		Sleep(2000)
+	WinActivate, Shadowverse
+
+	if FindText(717,1002,bMulti,"*121",100,50,X,Y,0.1,0.1) {
+		Click(X, Y)
+		Sleep(3000)
 		Click(961, 532) ;click ranked
-		Sleep(2000)
+		Sleep(3000)
 		Click(296, 368) ;click deck1
-		Sleep(2000)
-		Click(960, 782) ;click confirm deck
-		Sleep(2000)
+		Sleep(3000)
+		Click(1200, 775) ;click ok
+		Sleep(3000)
 	}
 
-	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/ok.png
-	if (ErrorLevel == 0) {
-		Click(foundX, foundY)
+	if FindText(1739,532,bOk,"*155",100,50,X,Y,0.1,0.1) {
+		Click(X, Y)
 	}
 
-	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/menu.png
-	if (ErrorLevel == 0) {
-		Click(foundX, foundY)
+	if FindText(69,66,bMenu,"*96",100,50,X,Y,0.1,0.1) {
+		Click(X, Y)
 	}
 
-	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/quit.png
-	if (ErrorLevel == 0) {
-		Click(foundX, foundY)
+	if FindText(959,277,bQuit,"*142",9999,9999,X,Y,0.1,0.1) {
+		Click(X, Y)
 	}
 
-	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/retry.png
-	if (ErrorLevel == 0) {
-		Click(foundX, foundY)
-	}	
-
-	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/quit2.png
-	if (ErrorLevel == 0) {
-		Click(foundX, foundY)
+	if FindText(1174,955,bRetry,"*161",100,50,X,Y,0.1,0.1) {
+		Click(X, Y)
 	}
 
-	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/again.png
-	if (ErrorLevel == 0) {
-		Click(foundX, foundY)
-		Sleep(2000)
+	if FindText(1004,979,bBattleAgain,"*150",100,50,X,Y,0.1,0.1) {
+		Click(X, Y)
+		Sleep(3000)
 		Click(296, 368) ;click deck1
-		Sleep(2000)
-		Click(960, 782) ;click confirm deck
-		Sleep(2000)
+		Sleep(3000)
+		Click(1200, 775) ;click ok
+		Sleep(3000)
 	}
 
-	imageSearch, foundX, foundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/rank_lost.png
+	imageSearch, X, Y, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *64 img/rank_lost.png
 	if (ErrorLevel == 0) {
-		Click(foundX, foundY)
+		Click(X, Y)
 	}	
 
 	Sleep(250)
@@ -87,8 +79,8 @@ MouseMove(x2, y2) {
 	Random, randY, 0, 10
 	MouseGetPos, x1, y1
 	dist := sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2))
-	time := dist * 1.3 + 75
-	RandomBezier(x1, y1, x2+randX, y2+randY, "T" time " P3-6")
+	time := dist * 1
+	RandomBezier(x1, y1, x2+randX, y2+randY, "T" time " P2-4")
 }
 
 ;====== CLOSE SCRIPT ======
