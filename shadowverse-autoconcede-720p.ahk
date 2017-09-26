@@ -46,6 +46,8 @@ while True
 		Click(792, 515) ;ok
 	}
 
+	FindTextClick(bRetry)
+
 	Sleep(250)
 }
 
